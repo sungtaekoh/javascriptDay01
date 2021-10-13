@@ -8,20 +8,70 @@
 	<script type="text/javascript">
 	function getGrade(){
 		document.write('getGrade 함수 실행<br>')
-		var kor = 95;//지역변수
+		var kor = 95;//지역변수 펑션 안에 있기 때문에 범위가 좁다 = 지역변수
 		const k = 100
 		document.write('전역변수 kor01 : '+kor01 +"<br>")
-		k=200
+			/*k=200 const값은 변경할 수 없기 때문에 중복될경우 실행되지 않는다*/ 
 		document.write(k+"<br>")
+		
 	}
-	var kor01 =12345;//전역변수
+	var kor01 =12345;//전역변수가 가능하기 때문에 위의 펑션에 값이 추가된다 바깥이 범위가 더 넓기 때문에 가능
 	getGrade();
 	document.write('지역변수 국어점수 :'+kor);
 	
 	/*
+	let : 함수 안에서만 사용할 수 있으며, let kor 다시 선언은 안된다. 
+			사용하고자 할때는 변수 이름만 사용해서 써야한다.
+			var : 전역변수 설정이나 지역변수 설정이 가능하다. 변수의 재 선언이 가능하다
+			키워드 없음 : 함수 안에서 전역변수로 동작시킬 수 있다.
+			const : 변수의 값을 변경할 수 없다.
+	
 	전혀 무슨내용이였는지 모르겠다 
 	function이 뭔지부터 알아내자
+	
+	function는 함수라고 부르며 기능이다 function(안에 아규먼트값)을 집어넣으면 해당하는 
+	아규먼트를 이용하여 아래의 실행문이 실행된다 
+	ex)function addNum(x, y) {
+
+	    return x + y;
+
+	}
+
+	document.write(addNum(2, 3));
+	
+	5가 출력이 된다
 	*/
+	
+	</script>
+	
+	<script type ="text/javascript">
+	
+	//예시 1
+	function getReturn(){
+		var kor = 999;
+		return kor;
+	}
+	reKor = getReturn()
+	document.write("리턴 : "+reKor)
+	
+	//예시 2	
+	function printFC(msg){
+		document.write(msg)
+	}
+	var m = "<hr>안녕하세요<hr>"
+	printFC(m)
+	
+	//예시 3	
+	function printFC02(a,b,c,d){
+		document.write(a)
+		document.write(b == undefined)
+		
+		document.write("arguments size : "+arguments.length)
+		for(i=0 ; i<arguments.length ; i++)
+			document.write("<hr>"+ arguments[i] +"<hr>")
+	}
+	var m = "<hr>222안녕하세요222<hr>"
+	printFC02(m,1,2,3,5,5,5,5,5,5)
 	
 	</script>
 </body>
