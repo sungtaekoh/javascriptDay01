@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+ 	<script type="text/javascript">
+ 	var x = 5
+ 	var y = "5"
+ 	document.write("x == y : "+(x == y)+"<br>")
+ 	document.write("x != y : "+(x != y)+"<br>")
+ 	/*타입을 보지 않는다*/
+ 	
+ 	document.write("x === y : "+(x === y)+"<br>")
+ 	document.write("x !== y : "+(x !== y)+"<br>")
+ 	/*타입과 값을 모두 본다*/
+ 	
+ 	/*자바와 똑같이 사용 가능하다*/
+ 	var gender = "M"
+ 	var age= 21
+ 	if(gender == "M") {
+ 		if(age >= 19){
+ 			var result = "남자 성인입니다"
+ 		}
+ 	}else{
+ 		var result = "여성입니다"
+ 	}
+ 	document.write(result + "<br>")
+ 	
+ 	var day
+ 	var week = new Date().getDay(); //0(일요일)~6(토요일)
+ 	switch(week){
+ 	case 0 : day="일요일"; break;
+ 	case 1 : day="월요일"; break;
+ 	case 2 : day="화요일"; break;
+ 	case 3 : day="수요일"; break;
+ 	case 4 : day="목요일"; break;
+ 	case 5 : day="금요일"; break;
+ 	case 6 : day="토요일"; break;
+ 	}
+ 	document.write(day + "입니다<br>")
+ 	
+ 	for(x=2;x<=5;x++){
+ 		for(y=1; y<=9; y++){
+ 			document.write(x+"*"+y+"="+x*y+"<br>")
+ 		}
+ 	}
+ 	
+ 	var x = 1
+ 	var sum = 0
+ 	while(x<=100){
+ 		sum +=x
+ 		i++
+ 	}
+ 	document.write(sum)
+ 	
+ 	/*quiz02*/
+ 	var num = prompt("아파트 층 수 입력");
+ 	document.write("<hr><table border='1'>");
+ 	for(;num>0;num--){
+ 		document.write("<tr>");
+ 		for(j=1;j<5;j++){
+ 			document.write("<td>"+(num*100+j)+"호</td>");
+ 		}
+ 		document.write("</tr>");
+ 	}
+ 	document.write("</table>");
+ 	</script>
+</body>
+</html>

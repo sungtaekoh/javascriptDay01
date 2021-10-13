@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+<body>
+<script type="text/javascript">
+	/*아파트 만들기*/
+	
+	var num = prompt("아파트 층 수 입력")
+	document.write("<hr><table border='1'>");
+	for(;num>0;num--){
+		document.write("<tr>");
+		for(j=1;j<5;j++){
+			document.write("<td>"+(num*100+j)+"호</td>");
+		}
+		document.write("</tr>")
+	}
+	document.write("</table>")
+	/*
+	prompt로 입력받은 수를 num에 저장
+	저장 한 수가 0보다 클경우 아래의 코드 입력
+	<tr>
+	포문과 도큐먼트로 인해서 num*100*(1~4)호가 만들어지고
+	해당 문이 끝나면 다시 첫번째 포문으로 올라가게 되는데 이번엔 -1이 된다
+	
+	다시 아까와 같은 식이 반복되는데 (num-1)*100*(1~4)식이 진행되며
+	점점 낮은층이 만들어져 간다 
+	
+	초기 설정한 num -1이 쌓여져 num 값이 0이 되면 해당 포문을 벗어나게 되고
+	document.write로 인해 </table>이 작성되며 표(아파트)는 완성이 된다
+	*/
+	
+</script>
+</body>
+
+
+</html>

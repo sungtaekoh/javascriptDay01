@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+	var x =5
+	var y ="5"
+	document.write("x==y: "+(x==y)+"<br>")
+	document.write("x!=y: "+(x!=y)+"<br>")
+	/*비교
+	자바와는 달리 equals같은걸 사용하지 않는다
+	x는 숫자 y는 문자열로 5를 표시 했지만 자바스크립느에서는
+	형태는 신경쓰지 않고 값만을 보고 비교한다
+	
+	document.write에서 html문법을 사용 할 때는 ""안에
+	넣어 사용한다*/
+	
+	document.write("x===y : "+(x===y)+"<br>")
+	document.write("x!==y : "+(x!==y)+"<br>")
+	/*
+	"==="혹은 "!=="를 이용하여 비교를 하게 될 경우
+	형태도 함께 비교를 하게 되어 자바와 같은 값이 나오게된다
+	*/
+	
+	var gender = "M"
+	var age = 21
+	
+	if(gender == "M"){
+		if(age >=19){
+			var result ="남자 성인입니다"
+		}
+	}else{
+			var result="여성입니다"
+			}
+	document.write(result+"<br>")
+	/*
+	gender = "M"으로 선언했다
+	age는 21으로 선언했다
+	
+	만약에 젠더가 M이라면 아래의 코드를 실행시켜라
+	만약에 에이지가 19보다 높다면 리설트 값에 남자 성인인니다를 넣어라
+	
+	else그게 아니라면 result에 여성입니다를 넣어라
+	
+	result의 값은 document.write로 출력된다
+	이때 gender는 M이고 age는 21이기 때문에 남자 성인입니다가 출력된다
+	*/
+	
+	var day
+	var week = new Date().getDay();//0(일요일)~6(토요일)
+	
+	switch(week){
+	case 0: day ="일요일";break;
+	case 1: day ="월요일";break;
+	case 2: day ="화요일";break;
+	case 3: day ="수요일";break;
+	case 4: day ="목요일";break;
+	case 5: day ="금요일";break;
+	case 6: day ="토요일";break;
+	}
+	document.write(day+"임니다<br>")
+	
+/*
+ * new Date().getDay();메소드를 통해 날짜에 대한 정보가 
+ week에 저장된다 
+ 스위치문에서 week의 값을 가지고 맞는 케이스를 찾아서 저장하게되고
+ 도큐먼트 라이트에 입력한데로 출력된다
+ 
+ 모르는것: new Date().getDay();의 기능을 잘 모르겠다
+//0(일요일)~6(토요일)
+	라고 쓰여있는데 그렇다면 10월 1일은 금요일인데 월요일로 표기된다는 건가?
+ */
+ 
+ //구구단 만들기
+ for(x=2; x<=5; x++){
+	 for(y=1;y<=9;y++){
+		 document.write(x+"*"+y+"="+x*y+"<br>")
+	 }
+ }
+ 
+ //1~100 더하기 연산
+ var x = 1
+ var sum =0
+ while(x<=100){
+	 sum+=x
+	 x++
+ }
+ document.write(sum)
+ 
+ 
+	</script>
+</body>
+</html>

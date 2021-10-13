@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var name = prompt('이름 입력')
+	var age = prompt('나이 입력')
+	var addr = prompt('주소 입력')
+	document.write("<table border='1'><tr><th>이름</th> <th>나이</th> <th>주소</th>")
+	document.write("</tr><tr><th>"+name+"</th> <th>"+age+"</th> <th>"+addr+"</th>")
+	document.write("</tr></table>")
+	
+	/*
+	실행 원리 
+	실행 시킬 시
+	prompt()안에 작성한 글 그대로 작은 입력창이 나온다 
+	var name = prompt()위의 코드 내용 그대로 작은 입력창에 입력한 값이 name에 저장이 된다
+	그리고 document에 입력한대로 table을 이용해 만든 표 안에 내가 prompt에 입력했던 값이 들어가서
+	출력되게 되는것이다
+	*/
+
+
+	/*하면서 궁금한점 
+	document.write()에는 왜 ""를 붙여서 쓴걸까?
+		문자열을 입력해 보니 ""가 없으면 출력이 안된다
+	
+	println()과 같은걸까?
+			
+			표를 입력할때 왜 나눠서 입력한걸까?
+					한번에 입력하는게 보기 편할거 같은데..
+					해보니까 안된다
+					중간에 줄바꿈을 하면 작동이 안된다 다만 엔터대신 
+					줄바꿈을 할경우 document.write기능을 이용하면 실행이 된다
+					
+					prompt는 자바스크립트만의 기능인걸까? 
+							그렇다
+	*/
+</script>
+</head>
+<body>
+
+
+</body>
+</html>

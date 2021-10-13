@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+	function getGrade(){
+		document.write('getGrade함수 실행<br>')
+		 let kor =95; //지역변변수
+		 const k = 100;
+		document.write('전역 kor01 : '+kor01 + "<br>")
+		let kor = 111; //지역변수
+	
+	}
+	var kor01 = 12345; //전역변수
+	getGrade();
+	document.write('지역변수 국어점수 : '+kor);
+	
+	/*
+	선생님
+	let : 함수 안에서만 사용할 수 있으며, let kor 다시 선언은 안된다.
+	사용하고자 할 때는 변수 이름만 사용해서 써야한다.
+	
+	var : 전역변수 설정이나 지역변수 설정이 가능하다. 변수의 재 선언이 가능하다
+	키워드 없음 : 함수 안에서 전역변수로 동작시킬 수 있다
+	const : 변수의 값을 변경 할 수 없다
+	*/
+	
+	
+	/*
+	let은 함수 안에서만 사용 할 수 있다 /한번설정하면 변경 할 수 없다
+	var는 변경 가능하다
+	const 변경이 안된다
+	*/
+	</script>
+	
+	<script type = "text/javascript">
+	function getReturn(){
+		var kor = 999;
+		return kor;
+	}
+	rekor = getReturn()
+	document.write("리턴: "+rekor)
+	
+	function printFC(msg){
+		document.write(msg)
+	}
+	var m = "<hr>안녕하세요<hr>"
+	printFC(m)
+	
+	function printFC02(a,b,c,d){
+		document.write(a)
+		document.write(b == undefined)
+		
+		document.write("argument size : "+arguments.length)
+		for(i=0 ; i<argument.length ; i++ )
+		document.write("<hr>"+arguments[i]+"<hr>")
+	}
+	var m ="<hr>222안녕하세요222<hr>"
+	printFC02(m,1,2,3,5,5,5,5,5)
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function click1(){
+	console.log('test')
+	var n = document.getElementbById('name1').value 
+	console.log(n)
+	document.getElementbById('name1').value =""
+	document.getElementbById('name2').value =n
+	var n3 = document.getElementbById('name3')
+	var msg = "<h1>배불러요</h1><h3>넵</h3>"
+	var DBData = ['홍길동','김개똥','고도리']
+	var msg = "<table border='1'>"
+	for(i=0;i<DBData.length;i++){
+		msg += "<tr><th>"+DBData[i]+"</th></th>"
+		
+	}
+	msg +="</table>"
+	n3.innerHTML = msg
+	/*print와 같은 기능 출력할때 */
+}
+function setImg(){
+	
+	
+}
+</script>
+</head>
+<body>
+<img id ="img" src="img.jpg">
+<br><button type="button" onclick="setImg()">이미지</button>
+<hr>
+	<input type="text" id="name1"><br>
+	<input type="text" id="name2"><br>
+	<div id='name3'>안녕하세요</div>
+	<input type="button" value="버튼" onclick="click1()"><br>
+</body>
+</html>
